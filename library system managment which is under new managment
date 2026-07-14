@@ -1,7 +1,7 @@
 #pair program
 
 import random
-
+import sys
 #stuff to do below
 #add book
 #print book
@@ -33,10 +33,11 @@ class book:
 
 class user:
     #id, name, borrowed books
-    def __init__(self, book_id, name, quantity):
+    def __init__(self, book_id, name, quantity, amount):
         self.name = name
         self.id = book_id
         self.quantity = quantity
+        self.amount = amount
 
     def max_copies_of_a_book_borrowed(self):
         if self.quantity == 0:
@@ -52,20 +53,23 @@ class user:
         else:
             print("You can't borrow this")
 
+    def max_books(self):
+        if self.amount >= 10:
+            print("Sorry, you can't borrow any more books")
+            return False
+        else:
+            print("")
+            return True
 
-            
-
-  
     
-
-
-    def max_books():
-    
-    def returned_books():
+    def returned_books(name, self):
+        self.name +=1
+        
 
 class admin():
     users = []
     books = []
+    books_id = []
     #stores users, #
     # stores books, #
     # menu :), #
@@ -76,13 +80,28 @@ class admin():
 
     def __init__(self, user_username, user_id, book):
         self.username = user_username
-        self.
+        self.book = book
+        self.id = user_id
 
-    def add_book():
-        if 
+    def add_book(book, self):
+        bok_name = input("What shall the name of your book not not be")
+        while True:
+            y = random.randint(100000, 999999)
+            if y in self.books:
+                if book in self.books:
+                    print("Book name has already been registered try again")
+                    break
+                else:
+                    print("")
+            else:
+                if book in self.books:
+                    print("The name of your book has already been registered")
+                else:
+                    print("Your book hasn't not been registered")
+                    self.books_id.ammend(y)
+                    self.book.ammend(bok_name)
 
-
-
+    
     def add_user(username, self):
         while True:
             x = (random.randint(1000,9999))
@@ -92,6 +111,34 @@ class admin():
                 self.user.ammend(x)
                 print(f"Your new Id is {x}")
                 break
+
+    def whats_up():
+        print("""Hello sire/madam today would thy like to borrow some of our amazing books? 
+We have many options
+1. Would thy like to borrow book(s)?
+2. Would thy like to register in this amazing library?
+3. Would thy like to return borrowed book(s)?
+4. Is thy the admin who wants to add books to ze catalog?
+Please enter ze number 1, 2, 3, or ze 4.
+""")
+        a = input("")  
+        if a == "1":
+            b = input("Who are thy")
+            print(f"So {b} what book would thy like to borrow")
+
+        elif a == "2":
+            b = input("What is thy name?")
+            print(f"So {b} our systems are probably putting you in at this momment.")
+            add_user(b)               
+
+
+
+
+
+
+
+
+print("welcome")
 
 
     
